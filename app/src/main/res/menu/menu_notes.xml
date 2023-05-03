@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.cuhk.cuhk_all_in_one.activities.NotesActivity">
+    <item
+        android:id="@+id/go_to_pin"
+        android:title="Go back to pin"
+        app:showAsAction="always" />
+</menu>

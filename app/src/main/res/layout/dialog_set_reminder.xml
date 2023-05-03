@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchEnableReminder"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:text="@string/remind_me_switch"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextReminderText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/reminder_text_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/switchEnableReminder"
+        app:layout_constraintStart_toStartOf="@+id/switchEnableReminder"
+        app:layout_constraintTop_toBottomOf="@+id/switchEnableReminder" />
+
+    <TextView
+        android:id="@+id/textViewRemindMeAt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Remind me at:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextReminderText"
+        app:layout_constraintStart_toStartOf="@+id/editTextReminderText"
+        app:layout_constraintTop_toBottomOf="@+id/editTextReminderText" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="@+id/editTextReminderText"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="@+id/editTextReminderText"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRemindMeAt" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker"
+        app:layout_constraintStart_toStartOf="@+id/datePicker"
+        app:layout_constraintEnd_toEndOf="@+id/datePicker" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
